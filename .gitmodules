@@ -4,6 +4,3 @@
 [submodule "sqlite_migrator"]
 	path = sqlite_migrator
 	url = /workspace/repos/sqlite_migrator.git
-[submodule "flutter_components"]
-	path = flutter_components
-	url = /workspace/repos/flutter_components.git
