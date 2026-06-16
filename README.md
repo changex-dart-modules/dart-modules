@@ -45,5 +45,5 @@ module_name/
 
 | 模块 | 状态 | 说明 |
 |------|------|------|
-| `cli_bridge` | ✅ 已创建 | Flutter ↔ Python CLI 自动化测试框架 |
-| `sqlite_migrator` | 📋 计划中 | SQLite 版本迁移管理器 |
+| `cli_bridge` | ✅ | Flutter ↔ Python CLI 自动化测试框架 |
+| `sqlite_migrator` | ✅ | SQLite 数据库版本迁移管理器 |
