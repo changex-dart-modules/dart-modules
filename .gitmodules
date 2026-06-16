@@ -1,0 +1,3 @@
+[submodule "cli_bridge"]
+	path = cli_bridge
+	url = /workspace/repos/cli_bridge.git
