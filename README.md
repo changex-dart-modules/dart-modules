@@ -47,3 +47,4 @@ module_name/
 |------|------|------|
 | `cli_bridge` | ✅ | Flutter ↔ Python CLI 自动化测试框架 |
 | `sqlite_migrator` | ✅ | SQLite 数据库版本迁移管理器 |
+| `flutter_components` | ✅ | 通用 Flutter UI 组件库（热力图等） |
