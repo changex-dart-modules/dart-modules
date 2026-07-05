@@ -1,10 +1,22 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as path;
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+
+/// 是否为 web 平台(纯 Dart 版,不依赖 flutter)
+/// dart:io 在 web 平台不可用,所以用 try-catch 检测
+final bool _kIsWeb = _detectWeb();
+bool _detectWeb() {
+  try {
+    // web 平台访问 Platform 会抛错
+    return !Platform.isLinux && !Platform.isWindows && !Platform.isMacOS &&
+           !Platform.isAndroid && !Platform.isIOS;
+  } catch (_) {
+    return true;  // Platform 不可用 = web
+  }
+}
 
 /// 迁移回调签名：接收已打开的 Database，执行 DDL 变更。
 typedef MigrationHandler = Future<void> Function(Database db);
@@ -49,7 +61,7 @@ class SqliteMigrator {
     bool enableWal = true,
   }) async {
     // ── FFI 适配（桌面端）──
-    if (enableFfi ?? (!kIsWeb && (Platform.isLinux || Platform.isWindows || Platform.isMacOS))) {
+    if (enableFfi ?? (!_kIsWeb && (Platform.isLinux || Platform.isWindows || Platform.isMacOS))) {
       sqfliteFfiInit();
       databaseFactory = databaseFactoryFfi;
     }
