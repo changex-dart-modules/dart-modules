@@ -23,4 +23,8 @@
 /// ```
 library sqlite_migrator;
 
+// re-export sqflite 的类型,让调用方只依赖 sqlite_migrator 一个包
+// 不用再单独 import 'package:sqflite/sqflite.dart'
+export 'package:sqflite/sqflite.dart' show Database, Sqflite, ConflictAlgorithm;
+
 export 'src/migrator.dart';
