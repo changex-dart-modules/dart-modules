@@ -1,0 +1,16 @@
+name: cli_bridge
+description: 通用 CLI Bridge 框架 — TCP JSON-line 协议中间件，自动参数校验 + 接口文档生成
+version: 0.1.0
+homepage: https://github.com/your-org/cli_bridge
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

@@ -1,0 +1,18 @@
+name: sqlite_migrator
+description: SQLite 数据库版本迁移管理器 — 自动版本追踪 + 备份 + 回调链
+version: 0.1.0
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.2
+  sqflite_common_ffi: ^2.3.4
+  path: ^1.9.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

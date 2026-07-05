@@ -1,6 +1,0 @@
-[submodule "cli_bridge"]
-	path = cli_bridge
-	url = https://github.com/changex-dart-modules/cli_bridge.git
-[submodule "sqlite_migrator"]
-	path = sqlite_migrator
-	url = https://github.com/changex-dart-modules/sqlite_migrator.git
